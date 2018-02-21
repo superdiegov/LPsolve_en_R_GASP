@@ -17,7 +17,8 @@ min_prueba<-lp("min", f.obj, f.con, f.dir, f.rhs, int.vec=1:6)$solution
 Areas<-c(42.72,0.5,0.29,14.5,0.07)
 Areas
 
-##EJEMPLO PISO 72
+########EJEMPLO PISO 72################################################################################
+########################################################################################################
 
 #dato1<-read.delim("clipboard")
 #write.table(dato1,file="Data_72.txt")
@@ -32,7 +33,6 @@ data2<-read.table(file.choose(), header=TRUE)
 f.obj<- (data2$Costo*data2$Sup_ha)+(data2$DistPoly*data2$DistAPP*data2$DistAPP)
 n_x<-length(f.obj)
 n_x
-#length(f.obj) = 12728
 #write.table(f.obj,file="f.obj.txt")
 
 ### Construccion de matrix Diagonal de Xi variables segun piso
@@ -52,8 +52,6 @@ Funcion_Objetivo<-lp("min", f.obj, f.con, f.dir, f.rhs, num.bin.solns=TRUE)
 Funcion_Objetivo
 
 Result<-lp("min", f.obj, f.con, f.dir, f.rhs, num.bin.solns=TRUE)$solution
-Result
-
 
 
 ##Exportacion resultados
